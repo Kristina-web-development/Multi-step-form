@@ -1,0 +1,7 @@
+.multi-step-form {
+    display: flex;
+    flex-direction: row;
+    gap: 120px;
+
+}
+
