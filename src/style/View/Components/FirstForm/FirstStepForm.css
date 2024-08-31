@@ -1,0 +1,38 @@
+#hFirstForm  {
+color:#022959;
+}
+#pFirstForm {
+    color: #9699AA;
+    font-family: "Ubuntu", sans-serif;
+    
+}
+#labelFirstForm, #inputFirstForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#labelFirstForm {
+color: #022959;
+font-family: "Ubuntu", sans-serif;
+font-weight: 400;
+font-size: 16px;
+}
+
+#inputFirstForm {
+    width: 450px;
+    height: 48px;
+    border-radius: 7px;
+    border: 1px solid #D6D9E6;
+    margin-top: 10px;
+  padding: 0;
+}
+#inputFirstForm::placeholder {
+    color: #9699AA;
+   font-size: 16px;
+   padding-left: 20px;
+   font-family: "Ubuntu", sans-serif;
+   font-weight: 500;
+}
+#container {
+padding-top: 30px;
+}
