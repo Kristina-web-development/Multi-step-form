@@ -48,13 +48,16 @@ const Layout: React.FC<ISteps> = ({ currentStep }) => {
   return (
     <nav>
       {steps.map((step) => (
+        //  <div id='stepcontainer'>
         <div id='stepnumber'key={step.number} className={currentStep === step.number ? 'active' : ''}>
-          <p  className={currentStep === step.number ? 'active-step' : 'step'}>{step.number}</p>
+        
+          <p className={currentStep === step.number ? 'active-step' : 'step'}>{step.number}</p>
           <div id='steptextcontainer'>
           <p id='steplabel'>{step.label}</p>
-          <p>{step.description}</p>
+          <p id='stepdescription'>{step.description}</p>
           </div>
-        </div>
+          </div>
+      // </div>
       ))}
     </nav>
   );

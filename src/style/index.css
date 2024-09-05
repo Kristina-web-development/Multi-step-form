@@ -33,3 +33,8 @@ body {
   font-family: var(--fontFamily);
   font-weight: var(--fontWieghtReg);
 }
+
+main {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,33 @@
+#secondForm {
+ display: flex;
+ flex-direction: row;
+ gap: 18px;
+}
+
+#containericon {
+    width: 138px;
+  height: 160px;
+  border-radius: 7px;
+  border: 1px solid #d6d9e6;
+  position: relative;
+}
+
+#icon {
+  position: absolute;
+  left: 15px;
+  top: 20px;
+}
+#tariff,
+#price {
+  left: 15px;
+  position: absolute;
+}
+
+#tariff  {
+    top: 80px;
+}
+
+#price {
+  top: 105px;
+  color: #9699aa;
+}

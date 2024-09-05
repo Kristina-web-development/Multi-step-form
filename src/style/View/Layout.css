@@ -2,7 +2,7 @@ nav {
   background: url("../../assets/images/bg-sidebar-desktop.svg");
   width: 274px;
   height: 568px;
-  padding-top: 50px;
+  padding-top: 20px;
   background-repeat: no-repeat;
 }
 
@@ -10,7 +10,13 @@ nav {
   display: flex;
   flex-direction: row;
   gap: 20px;
+  height: 70px;
+  padding-left: 10px;
 }
+/* #stepcontainer {
+width: 153px;
+height: 228px;
+} */
 
 .step {
   margin-left: 20px;
@@ -43,8 +49,21 @@ nav {
 
 #steptextcontainer {
   color: white;
+  height: 50px;
+  padding-top: 20px;
+  font-family: "Ubuntu", sans-serif;
+  
 }
 
 #steplabel {
   color: #abbcff;
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+   font-weight: 400;
+}
+#stepdescription {
+    padding-top: 5px;
+    margin: 0;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
 }
