@@ -15,7 +15,7 @@ export interface IUserData {
   userPhone: string;
   userEmail: string;
   plan: string;
-  planPrice: number;
+  planPrice: string;
   adds: [
     {
       nameService: string;
@@ -49,7 +49,7 @@ const MultiStepForm: FC = () => {
     userPhone: "",
     userEmail: "",
     plan: "",
-    planPrice: 0,
+    planPrice: "",
     adds: [
       {
         nameService: "",

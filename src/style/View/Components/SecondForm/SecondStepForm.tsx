@@ -37,17 +37,26 @@ const SecondStepForm: FC<{ setUserData: Function; userData: IUserData }> = ({
 
   const [isYearly, setIsYearly] = useState<boolean>(false);
   const [choosen, setChoosen] = useState({planName:"", planPrice:""})
-  // const handleToggle = () => {
-  //   setIsYearly((prev) => !prev);
-  // };
 
+  const getDataUser = (ev: any) => {
+    try {
+      const inputPrice = ev.target.dataset.planprice
+      const inputPlan = ev.target.id
+      setUserData({ ...userData, plan: inputPlan, planPrice: inputPrice });
+
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  console.log(userData)
   return (
     <div>
       <h1 id="hSecondForm">Select your plan</h1>
       <p id="pSecondForm">You have the option of monthly or yearly billing</p>
       <form id="secondForm">
         {plans.map((plan, idx) => (
-          <PlanCard key={idx} plan={plan} isYearly={isYearly} setChoosen={setChoosen}/>
+          <PlanCard getDataUser={ getDataUser} key={idx} plan={plan} isYearly={isYearly} setChoosen={setChoosen}/>
         ))}
       </form>
       {/* <div id="switchContainer">
@@ -61,7 +70,9 @@ const SecondStepForm: FC<{ setUserData: Function; userData: IUserData }> = ({
         </label>
         <span>{isYearly ? 'Yearly' : 'Monthly'}</span>
       </div> */}
+      <button onClick={()=>setIsYearly(!isYearly)}>{isYearly ? 'Yearly' : 'Monthly'}</button>
     </div>
+
   );
 };
 

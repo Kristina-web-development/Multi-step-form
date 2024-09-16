@@ -9,24 +9,25 @@ interface IPlanCard {
     priceYear: string;
   };
   isYearly: boolean;
-  setChoosen: Function
+  setChoosen: Function;
+  getDataUser: Function;
 }
 
 const PlanCard: FC<IPlanCard> = ({
   plan,
   isYearly,
-  setChoosen
+  setChoosen,
+  getDataUser,
 }) => {
-  const [selected, setSelected ] = useState<boolean>(false)
+  const [selected, setSelected] = useState<boolean>(false);
 
-  // const choosenplan = (ev: any) => {
-  //   console.log(ev)
-  // }
   return (
-    <div id="containericon" 
-    style={{border: selected ? "1px solid blue" :"none"}}
-    onClick={() => setSelected(selected === true ? false: true)}>
-      <label htmlFor={plan.tariff} >
+    <div
+      id="containericon"
+      style={{ border: selected ? "1px solid blue" : "none" }}
+      onClick={() => setSelected(selected === true ? false : true)}
+    >
+      <label htmlFor={plan.tariff}>
         <img
           id="icon"
           src={plan.urlImage}
@@ -37,11 +38,17 @@ const PlanCard: FC<IPlanCard> = ({
         <p id="tariff">{plan.tariff}</p>
         <p id="price">{isYearly ? plan.priceYear : plan.priceMonth}</p>
       </label>
-      <input id={plan.tariff} type="radio" name="secondform" style={{display:"none"}}
-        
+      <input
+        onClick={getDataUser}
+        id={plan.tariff}
+        data-planprice={isYearly ? plan.priceYear : plan.priceMonth}
+        type="radio"
+        name="plan"
+        style={{ display: "none" }}
       />
+      {isYearly && <p>2 months free</p>}
     </div>
   );
-}
+};
 
 export default PlanCard;
